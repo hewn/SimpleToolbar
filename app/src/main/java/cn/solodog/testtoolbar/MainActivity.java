@@ -25,9 +25,10 @@ public class MainActivity extends AppCompatActivity {
 //        toolbar.setTitleTextColor(Color.WHITE);
 //        toolbar.setSubtitle("subtitle");
 //        toolbar.setSubtitleTextColor(Color.WHITE);
-        toolbar.setNavigationIcon(R.mipmap.ic_drawer_home);
+        toolbar.setNavigationIcon(R.mipmap.ic_drawer_home);//最左边导航的图标
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
+            //最左边按钮的导航器
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this,"navigationlistenner",Toast.LENGTH_SHORT).show();
             }
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         });
         toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
+            //菜单的监听器
             public boolean onMenuItemClick(MenuItem item) {
                 int menuid=item.getItemId();
                 switch (menuid)
@@ -56,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-
+        //自定义标题的监听
         textbtn=(TextView)findViewById(R.id.toolbarbtn);
         textbtn.setOnClickListener(new View.OnClickListener() {
             @Override

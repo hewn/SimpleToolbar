@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
+<!--xmlns:xmlns:app="http://schemas.android.com/apk/res-auto"这句得自己手动加，因为用的是向下兼容的包-->
     <item
         android:id="@+id/m_search"
         android:icon="@mipmap/ic_search"
@@ -12,6 +12,7 @@
         android:icon="@mipmap/ic_notifications"
         android:title="@string/notification"
         app:showAsAction="ifRoom"/>
+    <!--item里的showAsAction得用app： 因为是用的是android.support.v7.widget.Toolbar，用默认弹出来的Android：showAS...药丸，效果无效-->
     <item
         android:id="@+id/item1"
         android:title="@string/item1"
